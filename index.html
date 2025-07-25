@@ -2,15 +2,16 @@
 <html lang="no">
 <head>
   <meta charset="UTF-8" />
-  <title>Postkort fra fremtiden</title>
+  <title>Postkort fra Fremtiden</title>
   <style>
     body, html {
       margin: 0;
       padding: 0;
       height: 100%;
       overflow: hidden;
+      font-family: Arial, sans-serif;
+      color: white;
     }
-
     video.bg {
       position: fixed;
       top: 0;
@@ -20,27 +21,56 @@
       object-fit: cover;
       z-index: -1;
     }
-
-    .innhold {
+    .content {
       position: relative;
       z-index: 1;
-      color: white;
-      font-family: sans-serif;
+      padding: 4rem 2rem;
       text-align: center;
-      margin-top: 30vh;
+      background: rgba(0, 0, 0, 0.4);
+      max-width: 800px;
+      margin: 10vh auto;
+      border-radius: 12px;
+    }
+    .content h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .content p {
+      font-size: 1.1rem;
+      margin: 0.5rem 0;
+    }
+    a {
+      color: #ffffff;
+      text-decoration: underline;
+    }
+    footer {
+      position: fixed;
+      bottom: 10px;
+      right: 20px;
+      font-size: 0.9rem;
+      opacity: 0.8;
     }
   </style>
 </head>
 <body>
-  <video class="bg" autoplay loop muted playsinline>
-    <source src="9c1fe352-24c5-4904-b03d-4f1bfd16580f.mp4" type="video/mp4">
+  <video class="bg" autoplay muted loop playsinline>
+    <source src="bakgrunn.mp4" type="video/mp4">
     Nettleseren din støtter ikke video.
   </video>
 
-  <div class="innhold">
+  <div class="content">
     <h1>Postkort fra Fremtiden</h1>
-    <p>💼 Leo.Rundgren.Olsen@dnb.no</p>
+    <p><a href="AI Infra - Disruptive Perspektiver No.1.pdf" target="_blank">📄 Nr. 1 – AI Infrastruktur</a></p>
+    <p><a href="Wealth of Nations - Disruptive Perspektiver No.2.pdf" target="_blank">📄 Nr. 2 – Wealth of Nations</a></p>
+    <p><a href="Digital Føydaløkonomi - Disruptive Perspektiver No.3.pdf" target="_blank">📄 Nr. 3 – Digital Føydaløkonomi</a></p>
+    <p><a href="Digitale Agenter - Disruptive Perspektiver No. 4.pdf" target="_blank">📄 Nr. 4 – Digitale Agenter</a></p>
+    <p><a href="Jakten på Metaverse - Disruptive Perspektiver No.5.pdf" target="_blank">📄 Nr. 5 – Jakten på Metaverse</a></p>
+    <p><a href="Kina 2.0 - Disruptive Perspektiver no.6.pdf" target="_blank">📄 Nr. 6 – Kina 2.0</a></p>
   </div>
+
+  <footer>
+    💼 <a href="mailto:Leo.Rundgren.Olsen@dnb.no">Leo.Rundgren.Olsen@dnb.no</a>
+  </footer>
 </body>
 </html>
 
