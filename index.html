@@ -2,51 +2,54 @@
 <html lang="no">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Disruptive Perspektiver</title>
   <style>
-    body, html {
+    * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
+    }
+
+    html, body {
       height: 100%;
-      font-family: sans-serif;
+      font-family: Arial, sans-serif;
       color: white;
     }
 
-    .video-background {
+    #background-video {
       position: fixed;
-      right: 0;
-      bottom: 0;
+      top: 0;
+      left: 0;
       min-width: 100%;
       min-height: 100%;
-      z-index: -1;
       object-fit: cover;
+      z-index: -1;
     }
 
     .content {
       position: relative;
-      z-index: 1;
-      padding: 50px;
-      background: rgba(0, 0, 0, 0.55);
-      min-height: 100vh;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(0, 0, 0, 0.5); /* litt mørkere for kontrast */
+      text-align: center;
+      padding: 20px;
     }
 
     h1 {
-      font-size: 3em;
-      margin-bottom: 20px;
-    }
-
-    ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    ul li {
-      margin-bottom: 10px;
+      font-size: 3rem;
+      margin-bottom: 2rem;
     }
 
     a {
-      color: #00ffff;
+      color: #00f0ff;
       text-decoration: none;
+      display: block;
+      margin: 0.5rem 0;
+      font-size: 1.2rem;
     }
 
     a:hover {
@@ -54,34 +57,32 @@
     }
 
     .contact {
-      margin-top: 40px;
-      font-size: 1.2em;
+      margin-top: 2rem;
+      font-size: 1rem;
     }
   </style>
 </head>
 <body>
 
-  
-  <video autoplay muted loop class="video-background">
+  <video autoplay loop muted playsinline id="background-video">
     <source src="bakgrunn.mp4" type="video/mp4">
-    
+    Din nettleser støtter ikke video.
   </video>
 
   <div class="content">
     <h1>Disruptive Perspektiver</h1>
 
-    <ul>
-      <li><a href="AI Infra - Disruptive Perspektiver No.1.pdf" target="_blank">AI Infra – Disruptive Perspektiver No.1</a></li>
-      <li><a href="Wealth of Nations - Disruptive Perspektiver No.2.pdf" target="_blank">Wealth of Nations – Disruptive Perspektiver No.2</a></li>
-      <li><a href="Digital Føydaløkonomi - Disruptive Perspektiver No.3.pdf" target="_blank">Digital Føydaløkonomi – Disruptive Perspektiver No.3</a></li>
-      <li><a href="Digitale Agenter - Disruptive Perspektiver No. 4.pdf" target="_blank">Digitale Agenter – Disruptive Perspektiver No.4</a></li>
-      <li><a href="Jakten på Metaverse - Disruptive Perspektiver No.5.pdf" target="_blank">Jakten på Metaverse – Disruptive Perspektiver No.5</a></li>
-      <li><a href="Kina 2.0 - Disruptive Perspektiver no.6.pdf" target="_blank">Kina 2.0 – Disruptive Perspektiver No.6</a></li>
-    </ul>
+    <a href="AI Infra - Disruptive Perspektiver No.1.pdf" target="_blank">AI Infra – Disruptive Perspektiver No.1</a>
+    <a href="Wealth of Nations - Disruptive Perspektiver No.2.pdf" target="_blank">Wealth of Nations – Disruptive Perspektiver No.2</a>
+    <a href="Digital Føydaløkonomi - Disruptive Perspektiver No.3.pdf" target="_blank">Digital Føydaløkonomi – Disruptive Perspektiver No.3</a>
+    <a href="Digitale Agenter - Disruptive Perspektiver No. 4.pdf" target="_blank">Digitale Agenter – Disruptive Perspektiver No.4</a>
+    <a href="Jakten på Metaverse - Disruptive Perspektiver No.5.pdf" target="_blank">Jakten på Metaverse – Disruptive Perspektiver No.5</a>
+    <a href="Kina 2.0 - Disruptive Perspektiver no.6.pdf" target="_blank">Kina 2.0 – Disruptive Perspektiver No.6</a>
 
     <div class="contact">
       Kontakt: <a href="mailto:Leo.Rundgren.Olsen@dnb.no">Leo.Rundgren.Olsen@dnb.no</a>
     </div>
   </div>
+
 </body>
 </html>
