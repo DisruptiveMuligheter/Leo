@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="no">
 <head>
-  <meta charset="UTF-8" />
-  <title>Postkort fra Fremtiden</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Postkort fra fremtiden</title>
   <style>
     body, html {
       margin: 0;
       padding: 0;
       height: 100%;
-      overflow: hidden;
       font-family: Arial, sans-serif;
       color: white;
     }
+
     video.bg {
       position: fixed;
       top: 0;
@@ -21,56 +22,38 @@
       object-fit: cover;
       z-index: -1;
     }
-    .content {
-      position: relative;
-      z-index: 1;
-      padding: 4rem 2rem;
-      text-align: center;
-      background: rgba(0, 0, 0, 0.4);
+
+    .container {
+      background-color: rgba(0, 0, 0, 0.5);
       max-width: 800px;
-      margin: 10vh auto;
-      border-radius: 12px;
+      margin: 80px auto;
+      padding: 40px;
+      border-radius: 20px;
+      text-align: center;
     }
-    .content h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1.5rem;
+
+    h1 {
+      font-size: 3em;
+      margin-bottom: 40px;
     }
-    .content p {
-      font-size: 1.1rem;
-      margin: 0.5rem 0;
-    }
+
     a {
-      color: #ffffff;
+      display: block;
+      color: white;
+      font-size: 1.2em;
       text-decoration: underline;
+      margin: 12px 0;
     }
+
+    a:hover {
+      color: #ffd;
+    }
+
+    .icon {
+      margin-right: 8px;
+    }
+
     footer {
-      position: fixed;
-      bottom: 10px;
-      right: 20px;
-      font-size: 0.9rem;
-      opacity: 0.8;
-    }
-  </style>
-</head>
-<body>
-  <video class="bg" autoplay muted loop playsinline>
-    <source src="bakgrunn.mp4" type="video/mp4">
-    Nettleseren din støtter ikke video.
-  </video>
-
-  <div class="content">
-    <h1>Postkort fra Fremtiden</h1>
-    <p><a href="AI Infra - Disruptive Perspektiver No.1.pdf" target="_blank">📄 Nr. 1 – AI Infrastruktur</a></p>
-    <p><a href="Wealth of Nations - Disruptive Perspektiver No.2.pdf" target="_blank">📄 Nr. 2 – Wealth of Nations</a></p>
-    <p><a href="Digital Føydaløkonomi - Disruptive Perspektiver No.3.pdf" target="_blank">📄 Nr. 3 – Digital Føydaløkonomi</a></p>
-    <p><a href="Digitale Agenter - Disruptive Perspektiver No. 4.pdf" target="_blank">📄 Nr. 4 – Digitale Agenter</a></p>
-    <p><a href="Jakten på Metaverse - Disruptive Perspektiver No.5.pdf" target="_blank">📄 Nr. 5 – Jakten på Metaverse</a></p>
-    <p><a href="Kina 2.0 - Disruptive Perspektiver no.6.pdf" target="_blank">📄 Nr. 6 – Kina 2.0</a></p>
-  </div>
-
-  <footer>
-    💼 <a href="mailto:Leo.Rundgren.Olsen@dnb.no">Leo.Rundgren.Olsen@dnb.no</a>
-  </footer>
-</body>
-</html>
-
+      text-align: center;
+      margin-top: 40px;
+      font-
