@@ -28,17 +28,16 @@
     }
 
     .content {
-      position: relative;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      background-color: rgba(0, 0, 0, 0.5); /* litt mørkere for kontrast */
-      text-align: center;
-      padding: 20px;
-    }
-
+  position: relative;
+  min-height: 100vh;  /* Tar minst hele skjermen, men kan vokse */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Starter øverst, i stedet for midt */
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  padding: 20px;
+}
     h1 {
       font-size: 3rem;
       margin-bottom: 2rem;
