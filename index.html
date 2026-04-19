@@ -1,104 +1,207 @@
 <!DOCTYPE html>
 <html lang="no">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Disruptive Perspektiver</title>
   <style>
+    :root {
+      --bg: #0b1020;
+      --panel: #111933;
+      --panel-2: #162241;
+      --text: #eef3ff;
+      --muted: #b5c2e0;
+      --brand: #63b3ff;
+      --brand-2: #8ef0d7;
+      --border: rgba(255, 255, 255, 0.1);
+    }
+
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
 
-    html, body {
-      height: 100%;
-      font-family: Arial, sans-serif;
-      color: white;
+    body {
+      font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 5% 10%, rgba(99, 179, 255, 0.25), transparent 30%),
+        radial-gradient(circle at 95% 20%, rgba(142, 240, 215, 0.2), transparent 25%),
+        linear-gradient(160deg, #090e1c, #0f1831 55%, #0a1227);
+      min-height: 100vh;
+      line-height: 1.5;
     }
 
-    #background-video {
-      position: fixed;
+    .container {
+      width: min(1100px, 92%);
+      margin: 0 auto;
+    }
+
+    .navbar {
+      position: sticky;
       top: 0;
-      left: 0;
-      min-width: 100%;
-      min-height: 100%;
-      object-fit: cover;
-      z-index: -1;
+      z-index: 20;
+      backdrop-filter: blur(10px);
+      background: rgba(11, 16, 32, 0.8);
+      border-bottom: 1px solid var(--border);
     }
 
-    .content {
-  position: relative;
-  min-height: 100vh;  /* Tar minst hele skjermen, men kan vokse */
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start; /* Starter øverst, i stedet for midt */
-  align-items: center;
-  background-color: rgba(0, 0, 0, 0.5);
-  text-align: center;
-  padding: 20px;
-}
-    h1 {
-      font-size: 3rem;
-      margin-bottom: 2rem;
+    .nav-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.9rem 0;
+      gap: 1rem;
     }
 
-    a {
-      color: #00f0ff;
+    .logo {
+      font-weight: 700;
+      letter-spacing: 0.2px;
+      font-size: 1.05rem;
+    }
+
+    .menu {
+      list-style: none;
+      display: flex;
+      gap: 0.75rem;
+    }
+
+    .menu a {
+      color: var(--text);
       text-decoration: none;
-      display: block;
-      margin: 0.5rem 0;
-      font-size: 1.2rem;
+      padding: 0.55rem 0.9rem;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      transition: 0.2s ease;
+      font-size: 0.95rem;
     }
 
-    a:hover {
-      text-decoration: underline;
+    .menu a:hover {
+      border-color: rgba(99, 179, 255, 0.5);
+      background: rgba(99, 179, 255, 0.12);
     }
 
-    .contact {
-      margin-top: 2rem;
-      font-size: 1rem;
+    .hero {
+      padding: 4rem 0 2.2rem;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      margin-bottom: 0.8rem;
+    }
+
+    .hero p {
+      max-width: 760px;
+      margin: 0 auto;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 1rem;
+      padding: 1rem 0 3rem;
+    }
+
+    .card {
+      background: linear-gradient(175deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01));
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 1.05rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+    }
+
+    .card h2 {
+      font-size: 1.06rem;
+      line-height: 1.35;
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    .card a {
+      margin-top: auto;
+      display: inline-block;
+      text-decoration: none;
+      color: #03142d;
+      background: linear-gradient(90deg, var(--brand), var(--brand-2));
+      padding: 0.5rem 0.8rem;
+      border-radius: 10px;
+      font-weight: 600;
+      width: fit-content;
+    }
+
+    .footer {
+      border-top: 1px solid var(--border);
+      padding: 1.25rem 0 2.5rem;
+      color: var(--muted);
+      text-align: center;
+      font-size: 0.92rem;
+    }
+
+    .footer a {
+      color: var(--brand);
+      text-decoration: none;
     }
   </style>
 </head>
 <body>
-
-  <video autoplay loop muted playsinline id="background-video">
-    <source src="bakgrunn.mp4.mp4" type="video/mp4">
-  </video>
-
-  <div class="content">
-    <h1>Disruptive Perspektiver</h1>
-
-    <a href="AI Infra - Disruptive Perspektiver No.1.pdf" target="_blank">AI Infrastruktur – No.1</a>
-    <a href="Wealth of Nations - Disruptive Perspektiver No.2.pdf" target="_blank">Wealth of Nations – No.2</a>
-    <a href="Digital Føydaløkonomi - Disruptive Perspektiver No.3.pdf" target="_blank">Digital Føydaløkonomi – No.3</a>
-    <a href="Digitale Agenter - Disruptive Perspektiver No. 4.pdf" target="_blank">Digitale AI-Agenter – No.4</a>
-    <a href="Jakten på Metaverse - Disruptive Perspektiver No.5.pdf" target="_blank">Jakten på Metaverse – No.5</a>
-    <a href="Kina 2.0 - Disruptive Perspektiver no.6.pdf" target="_blank">Kina 2.0 – No.6</a>
-    <a href="Fysiske Agenter - Disruptive Perspektiver No.7.pdf" target="_blank">Fysiske AI-Agenter – No.7</a>
-    <a href="Selvkjørende Agenter - Disruptive Perspektiver No. 8.pdf" target="_blank">Selvkjørende Agenter – No.8</a>
-    <a href="Disruptive Teorier - Disruptive Perspektiver No. 9.pdf" target="_blank">Disruptive Teorier – No.9</a>
-    <a href="Mange-gangern - Disruptive Perspektiver No.10.pdf" target="_blank">Mange-gangern – No.10</a>
-    <a href="Dot-com vs AI - Disruptive Perspektiver No.11.pdf" target="_blank">Dot-com vs AI – No.11</a>
-    <a href="Ordkommando - Disruptive Perspektiver No. 12.pdf" target="_blank">Ordkommando – No.12</a>
-    <a href="Disruptivt Digitalt Amerikabrev - Disruptive Perspektiver No.13.pdf" target="_blank">Disruptivt Amerikabrev – No.13</a>
-    <a href="Tesla-telefon - Disruptive Perspektiver No.14.pdf" target="_blank">Tesla-telefon – No.14</a>
-    <a href="Humanoids i hjemmet - Disruptive Perspektiver No.15.pdf" target="_blank">Humanoids i hjemmet – No.15</a>
-    <a href="Forsikringsbransjens disrupsjon - Disruptive Perspektiver No.16.pdf" target="_blank">Forsikringsbransjens disrupsjon – No.16</a>
-    <a href="Beta og TE - Disruptive Perspektiver No.17.pdf" target="_blank">Beta og Tracking Error – No.17</a>
-    <a href="CES 2026 - Disruptive Perspektiver No.18.pdf" target="_blank">CES 2026 – No.18</a>
-    <a href="Edge AI - Disruptive Perspektiver No.19.pdf" target="_blank">Edge AI – No.19</a>
-    <a href="Droner - Disruptive Perspektiver No.20.pdf" target="_blank">Droner – No.20</a>
-    <a href="Selvkjørende lastebiler - Disruptive Perspektiver No.21.pdf" target="_blank">Selvkjørende lastebiler – No.21</a>
-    <a href="Humanoids - Disruptive Perspektiver No.22.pdf" target="_blank">Humanoids - No.22</a>
-    <a href="Maskinbyråkratiet - Disruptive Perspektiver No.23.pdf" target="_blank">Maskinbyråkratiet - No.23</a>
-    
-    <div class="contact">
-      <a href="https://forms.office.com/e/M5R3mPFwyi">Trykk for påmelding</a>
-      Kontakt: <a href="mailto:Leo.Rundgren.Olsen@dnb.no">Leo.Rundgren.Olsen@dnb.no</a>
+  <nav class="navbar">
+    <div class="container nav-inner">
+      <div class="logo">Disruptive Perspektiver</div>
+      <ul class="menu">
+        <li><a href="#hjem">Hjem</a></li>
+        <li><a href="https://www.norli.no/boker/dokumentar-og-fakta/historie-og-dokumentar/debatt-og-samfunn/postkort-fra-fremtiden-9788271464639" target="_blank" rel="noopener noreferrer">Bok</a></li>
+      </ul>
     </div>
-  </div>
+  </nav>
 
+  <header class="hero container" id="hjem">
+    <h1>Disruptive Perspektiver</h1>
+    <p>
+      Her finner du alle utgaver av nyhetsbrevet samlet på ett sted.
+      Klikk på en utgave for å åpne PDF-en og lese hele analysen.
+    </p>
+  </header>
+
+  <main class="container">
+    <section class="grid" aria-label="Nyhetsbrevoversikt">
+      <article class="card"><h2>No.1 – AI Infrastruktur</h2><p>En introduksjon til den teknologiske grunnmuren som gjør moderne AI mulig. Utgaven forklarer hvorfor infrastruktur er den skjulte konkurransefordelen.</p><a href="AI Infra - Disruptive Perspektiver No.1.pdf" target="_blank">Les utgave</a></article>
+      <article class="card"><h2>No.2 – Wealth of Nations</h2><p>Hvordan teknologi påvirker nasjonal verdiskaping, produktivitet og maktbalanse. Denne utgaven setter AI inn i et bredere økonomisk perspektiv.</p><a href="Wealth of Nations - Disruptive Perspektiver No.2.pdf" target="_blank">Les utgave</a></article>
+      <article class="card"><h2>No.3 – Digital Føydaløkonomi</h2><p>En analyse av plattformmakt og nye digitale avhengighetsforhold. Utgaven diskuterer hvem som eier verdien i den digitale økonomien.</p><a href="Digital Føydaløkonomi - Disruptive Perspektiver No.3.pdf" target="_blank">Les utgave</a></article>
+      <article class="card"><h2>No.4 – Digitale AI-Agenter</h2><p>Om agentiske systemer som kan utføre oppgaver på egen hånd. Fokus er på praktiske bruksområder og konsekvenser for kunnskapsarbeid.</p><a href="Digitale Agenter - Disruptive Perspektiver No. 4.pdf" target="_blank">Les utgave</a></article>
+      <article class="card"><h2>No.5 – Jakten på Metaverse</h2><p>En nøktern vurdering av hype versus realitet. Utgaven ser på hva som faktisk skaper varig verdi når nye plattformer lanseres.</p><a href="Jakten på Metaverse - Disruptive Perspektiver No.5.pdf" target="_blank">Les utgave</a></article>
+      <article class="card"><h2>No.6 – Kina 2.0</h2><p>Et overblikk over Kinas teknologiske strategier og neste fase i innovasjonskappløpet. Perspektivet kobler geopolitikk, industri og data.</p><a href="Kina 2.0 - Disruptive Perspektiver no.6.pdf" target="_blank">Les utgave</a></article>
+      <article class="card"><h2>No.7 – Fysiske AI-Agenter</h2><p>Fra software til maskinvare: hvordan AI flytter inn i den fysiske verden. Utgaven ser på robotikk, automasjon og nye grensesnitt.</p><a href="Fysiske Agenter - Disruptive Perspektiver No.7.pdf" target="_blank">Les utgave</a></article>
+      <article class="card"><h2>No.8 – Selvkjørende Agenter</h2><p>Hva skjer når digitale systemer får økt beslutningsmyndighet? Her diskuteres kontroll, risiko og nye produktivitetsløft.</p><a href="Selvkjørende Agenter - Disruptive Perspektiver No. 8.pdf" target="_blank">Les utgave</a></article>
+      <article class="card"><h2>No.9 – Disruptive Teorier</h2><p>Et rammeverk for å forstå hvorfor noen teknologier endrer markedet raskt, mens andre ikke gjør det. Utgaven gir begreper du kan bruke i praksis.</p><a href="Disruptive Teorier - Disruptive Perspektiver No. 9.pdf" target="_blank">Les utgave</a></article>
+      <article class="card"><h2>No.10 – Mange-gangern</h2><p>Om asymmetri i avkastning og hvorfor få vinnere ofte driver totalen. Perspektivet kobler teknologiutvikling og investeringslogikk.</p><a href="Mange-gangern - Disruptive Perspektiver No.10.pdf" target="_blank">Les utgave</a></article>
+      <article class="card"><h2>No.11 – Dot-com vs AI</h2><p>Likheter og forskjeller mellom dagens AI-bølge og dot-com-perioden. Målet er å skille varige trender fra midlertidig entusiasme.</p><a href="Dot-com vs AI - Disruptive Perspektiver No.11.pdf" target="_blank">Les utgave</a></article>
+      <article class="card"><h2>No.12 – Ordkommando</h2><p>Språk blir et styringssystem for programvare. Utgaven viser hvordan prompt-baserte grensesnitt endrer arbeidsprosesser.</p><a href="Ordkommando - Disruptive Perspektiver No. 12.pdf" target="_blank">Les utgave</a></article>
+      <article class="card"><h2>No.13 – Disruptivt Amerikabrev</h2><p>Innsikt fra USA om tempo, investeringer og teknologiske prioriteringer. Perspektivet gir signaler om hva som kan treffe Europa neste.</p><a href="Disruptivt Digitalt Amerikabrev - Disruptive Perspektiver No.13.pdf" target="_blank">Les utgave</a></article>
+      <article class="card"><h2>No.14 – Tesla-telefon</h2><p>Et tankeeksperiment om økosystemmakt, hardware og plattformstrategi. Utgaven drøfter hva som kreves for å utfordre etablerte aktører.</p><a href="Tesla-telefon - Disruptive Perspektiver No.14.pdf" target="_blank">Les utgave</a></article>
+      <article class="card"><h2>No.15 – Humanoids i hjemmet</h2><p>En nær fremtid der roboter beveger seg fra fabrikk til stue. Fokus er på modenhet, kostnad og faktisk nytte i hverdagen.</p><a href="Humanoids i hjemmet - Disruptive Perspektiver No.15.pdf" target="_blank">Les utgave</a></article>
+      <article class="card"><h2>No.16 – Forsikringsbransjens disrupsjon</h2><p>Hvordan data, AI og nye distribusjonsmodeller kan endre forsikring. Utgaven viser hvilke deler av verdikjeden som er mest utsatt.</p><a href="Forsikringsbransjens disrupsjon - Disruptive Perspektiver No.16.pdf" target="_blank">Les utgave</a></article>
+      <article class="card"><h2>No.17 – Beta og Tracking Error</h2><p>Et investeringsfaglig blikk på risiko, referanseindeks og avvik. Utgaven kobler porteføljeteori med en mer disruptiv markedsforståelse.</p><a href="Beta og TE - Disruptive Perspektiver No.17.pdf" target="_blank">Les utgave</a></article>
+      <article class="card"><h2>No.18 – CES 2026</h2><p>Oppsummering av de viktigste signalene fra CES 2026. Her trekkes linjene fra produkter på messen til reelle markedsskift.</p><a href="CES 2026 - Disruptive Perspektiver No.18.pdf" target="_blank">Les utgave</a></article>
+      <article class="card"><h2>No.19 – Edge AI</h2><p>AI flytter ut til enheter nær brukeren for lavere latency og bedre personvern. Utgaven forklarer hvorfor dette blir strategisk viktig.</p><a href="Edge AI - Disruptive Perspektiver No.19.pdf" target="_blank">Les utgave</a></article>
+      <article class="card"><h2>No.20 – Droner</h2><p>Fra hobby til kritisk infrastruktur: droner får stadig større industriell rolle. Perspektivet dekker regulering, sikkerhet og skalering.</p><a href="Droner - Disruptive Perspektiver No.20.pdf" target="_blank">Les utgave</a></article>
+      <article class="card"><h2>No.21 – Selvkjørende lastebiler</h2><p>Hva autonom logistikk kan bety for transportkostnader og verdikjeder. Utgaven ser på teknologi, gjennomføring og tidslinje.</p><a href="Selvkjørende lastebiler - Disruptive Perspektiver No.21.pdf" target="_blank">Les utgave</a></article>
+      <article class="card"><h2>No.22 – Humanoids</h2><p>En status på humanoid-kappløpet og hvilke aktører som leder an. Fokus er på produksjonsevne, programvare og kommersiell timing.</p><a href="Humanoids - Disruptive Perspektiver No.22.pdf" target="_blank">Les utgave</a></article>
+      <article class="card"><h2>No.23 – Maskinbyråkratiet</h2><p>Hvordan automatiserte beslutningssystemer kan forme institusjoner og prosesser. Utgaven reiser spørsmål om styring, ansvar og tillit.</p><a href="Maskinbyråkratiet - Disruptive Perspektiver No.23.pdf" target="_blank">Les utgave</a></article>
+    </section>
+  </main>
+
+  <footer class="footer container">
+    Kontakt: <a href="mailto:Leo.Rundgren.Olsen@dnb.no">Leo.Rundgren.Olsen@dnb.no</a> ·
+    <a href="https://forms.office.com/e/M5R3mPFwyi" target="_blank" rel="noopener noreferrer">Påmelding til nyhetsbrev</a>
+  </footer>
 </body>
 </html>
