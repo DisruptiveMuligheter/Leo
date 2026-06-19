@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Disruptive Perspectives</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      min-height: 100%;
+      font-family: Arial, sans-serif;
+      color: white;
+    }
+
+    #background-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    .content {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      background-color: rgba(0, 0, 0, 0.5);
+      text-align: center;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .intro {
+      max-width: 720px;
+      font-size: 1.1rem;
+      line-height: 1.5;
+      margin-bottom: 1.5rem;
+      color: rgba(255, 255, 255, 0.88);
+    }
+
+    a {
+      color: #00f0ff;
+      text-decoration: none;
+      display: block;
+      margin: 0.5rem 0;
+      font-size: 1.2rem;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .language-nav {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 2rem;
+    }
+
+    .language-nav a {
+      border: 1px solid #00f0ff;
+      border-radius: 999px;
+      padding: 10px 18px;
+      margin: 0;
+      font-size: 1rem;
+      background: rgba(0, 240, 255, 0.08);
+    }
+
+    .language-nav a.active {
+      background: rgba(0, 240, 255, 0.22);
+      color: white;
+    }
+
+    .reports {
+      margin-top: 0.5rem;
+    }
+
+    .contact {
+      margin-top: 2rem;
+      font-size: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <video autoplay loop muted playsinline id="background-video">
+    <source src="bakgrunn.mp4.mp4" type="video/mp4">
+  </video>
+
+  <div class="content">
+    <h1>Disruptive Perspectives</h1>
+
+    <div class="language-nav">
+      <a href="index.html">Norwegian</a>
+      <a href="english.html" class="active">English</a>
+    </div>
+
+    <p class="intro">
+      English versions of Disruptive Perspectives reports. New translated PDFs can be uploaded to the <strong>english</strong> folder in this GitHub repository.
+    </p>
+
+    <div class="reports">
+      <a href="english/AI Infrastructure - Disruptive Perspectives No.1.pdf" target="_blank">AI Infrastructure – No.1</a>
+      <a href="english/Wealth of Nations - Disruptive Perspectives No.2.pdf" target="_blank">Wealth of Nations – No.2</a>
+      <a href="english/Digital Feudal Economy - Disruptive Perspectives No.3.pdf" target="_blank">Digital Feudal Economy – No.3</a>
+      <a href="english/Digital AI Agents - Disruptive Perspectives No.4.pdf" target="_blank">Digital AI Agents – No.4</a>
+      <a href="english/The Search for the Metaverse - Disruptive Perspectives No.5.pdf" target="_blank">The Search for the Metaverse – No.5</a>
+      <a href="english/China 2.0 - Disruptive Perspectives No.6.pdf" target="_blank">China 2.0 – No.6</a>
+      <a href="english/Physical AI Agents - Disruptive Perspectives No.7.pdf" target="_blank">Physical AI Agents – No.7</a>
+      <a href="english/Self-Driving Agents - Disruptive Perspectives No.8.pdf" target="_blank">Self-Driving Agents – No.8</a>
+      <a href="english/Disruptive Theories - Disruptive Perspectives No.9.pdf" target="_blank">Disruptive Theories – No.9</a>
+      <a href="english/The Multibagger - Disruptive Perspectives No.10.pdf" target="_blank">The Multibagger – No.10</a>
+      <a href="english/Dot-com vs AI - Disruptive Perspectives No.11.pdf" target="_blank">Dot-com vs AI – No.11</a>
+      <a href="english/Voice Command - Disruptive Perspectives No.12.pdf" target="_blank">Voice Command – No.12</a>
+      <a href="english/Disruptive American Letter - Disruptive Perspectives No.13.pdf" target="_blank">Disruptive American Letter – No.13</a>
+      <a href="english/Tesla Phone - Disruptive Perspectives No.14.pdf" target="_blank">Tesla Phone – No.14</a>
+      <a href="english/Humanoids in the Home - Disruptive Perspectives No.15.pdf" target="_blank">Humanoids in the Home – No.15</a>
+      <a href="english/Insurance Industry Disruption - Disruptive Perspectives No.16.pdf" target="_blank">Insurance Industry Disruption – No.16</a>
+      <a href="english/Beta and Tracking Error - Disruptive Perspectives No.17.pdf" target="_blank">Beta and Tracking Error – No.17</a>
+      <a href="english/CES 2026 - Disruptive Perspectives No.18.pdf" target="_blank">CES 2026 – No.18</a>
+      <a href="english/Edge AI - Disruptive Perspectives No.19.pdf" target="_blank">Edge AI – No.19</a>
+      <a href="english/Drones - Disruptive Perspectives No.20.pdf" target="_blank">Drones – No.20</a>
+      <a href="english/Self-Driving Trucks - Disruptive Perspectives No.21.pdf" target="_blank">Self-Driving Trucks – No.21</a>
+      <a href="english/Humanoids - Disruptive Perspectives No.22.pdf" target="_blank">Humanoids – No.22</a>
+      <a href="english/Machine Bureaucracy - Disruptive Perspectives No.23.pdf" target="_blank">Machine Bureaucracy – No.23</a>
+      <a href="english/The Renaissance of Space - Disruptive Perspectives No.24.pdf" target="_blank">The Renaissance of Space – No.24</a>
+    </div>
+
+    <div class="contact">
+      Contact: <a href="mailto:Leo.Rundgren.Olsen@dnb.no">Leo.Rundgren.Olsen@dnb.no</a>
+    </div>
+  </div>
+
+</body>
+</html>
